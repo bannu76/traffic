@@ -2,37 +2,22 @@ import { useEffect, useState } from "react";
 
 import "./index.css";
 
-const pedestrianStates = {
-  red: {
-    kolor: "red",
-    duration: 400,
-    next: "green",
-    counter: 0,
-  },
-  green: {
-    kolor: "green",
-    duration: 3000,
-    next: "yellow",
-    counter: 0,
-  },
-};
-
 const colorStates = {
   red: {
     kolor: "red",
-    duration: 1000,
+    duration: 7000,
     next: "green",
     counter: 0,
   },
   yellow: {
     kolor: "yellow",
-    duration: 500,
+    duration: 3000,
     next: "red",
     counter: 0,
   },
   green: {
     kolor: "green",
-    duration: 3000,
+    duration: 10000,
     next: "yellow",
     counter: 0,
   },
@@ -93,7 +78,7 @@ const TrafficLights = () => {
       </ul>
 
       <button onClick={crossPedestrian} className="pedestrian-button">
-        Pedestrain {duration}
+        Pedestrain
       </button>
 
       <button className="pedestrian-button" onClick={stop}>
